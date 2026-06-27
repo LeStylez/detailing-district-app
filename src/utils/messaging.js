@@ -16,7 +16,6 @@ If you have any questions, please reply or contact ${settings.phone || settings.
 Thank you,
 ${settings.businessName}`
 }
-
 export function buildWhatsapp(settings, invoice, totals) {
   return `Hi ${invoice.customerName || ''}, here is your invoice from ${settings.businessName}.
 Invoice: ${invoice.invoiceNo}
@@ -25,13 +24,11 @@ Balance due: ${money(totals.balance)}
 ${settings.phone ? `Questions: ${settings.phone}` : ''}
 ${settings.whatsappFooter}`
 }
-
 export function openEmail(settings, invoice, totals) {
   const to = invoice.customerEmail || settings.defaultEmailRecipient || ''
   const subject = `Invoice ${invoice.invoiceNo} from ${settings.businessName}`
   window.location.href = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(buildEmail(settings, invoice, totals))}`
 }
-
 export function openWhatsapp(settings, invoice, totals) {
   const raw = (invoice.customerPhone || '').replace(/[^\d+]/g, '')
   const url = raw.length > 7

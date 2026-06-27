@@ -10,7 +10,6 @@ export function createInvoice(no = 'INV-1001') {
     discount: 0, travelFee: 0, depositPaid: 0, internalNotes: '', beforePhotos: [], afterPhotos: [],
   }
 }
-
 export function calcInvoice(invoice, settings) {
   const subtotal = invoice.items.reduce((sum, item) => sum + Number(item.qty || 0) * Number(item.rate || 0), 0)
   const beforeVat = Math.max(subtotal - Number(invoice.discount || 0), 0) + Number(invoice.travelFee || 0)
@@ -19,10 +18,8 @@ export function calcInvoice(invoice, settings) {
   const balance = Math.max(total - Number(invoice.depositPaid || 0), 0)
   return { subtotal, beforeVat, vat, total, balance }
 }
-
 export function nextNumber(prefix, array, field) {
   const nums = array.map((x) => String(x[field] || '').replace(prefix, '')).map((x) => parseInt(x, 10)).filter(Boolean)
   return `${prefix}${(nums.length ? Math.max(...nums) : 1000) + 1}`
 }
-
 export function chipClass(status) { return `chip chip-${String(status || 'Draft').toLowerCase()}` }
