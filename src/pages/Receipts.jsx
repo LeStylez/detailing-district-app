@@ -1,0 +1,2 @@
+import Card from '../components/ui/Card.jsx'; import { Empty } from '../components/ui/Form.jsx'; import { money } from '../utils/format.js'
+export default function Receipts({receipts}){return <Card><h3>Receipts</h3>{receipts.length===0&&<Empty>No receipts yet.</Empty>}{receipts.map(r=><div className="list" key={r.id}><b>{r.receiptNo}</b><span>{r.customerName} · Invoice {r.invoiceNo}</span><small>{r.date} · {money(r.total)}</small></div>)}</Card>}
