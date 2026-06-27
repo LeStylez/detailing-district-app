@@ -1,7 +1,7 @@
 {
-  "name": "detailing-district-pro-foundation-fixed",
+  "name": "detailing-district-pro-supabase-final",
   "private": true,
-  "version": "3.0.1",
+  "version": "4.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.48.1",
     "@vitejs/plugin-react": "^4.3.1",
     "vite": "^5.4.2",
     "react": "^18.3.1",
