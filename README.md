@@ -1,26 +1,27 @@
-# Detailing District Pro Core
+# Detailing District Pro Dark Build
 
-Core Version 2.0 MVP for Detailing District.
+Built from your uploaded project and restyled to match the dark professional dashboard mockup.
 
-Features:
-- Dashboard KPIs
+## Included
+- Dark premium dashboard UI
+- Revenue / outstanding / paid / average invoice cards
+- Recent invoices
+- Upcoming bookings preview
+- Quick actions
 - Customers
 - Invoice builder
-- Saved invoices
-- Delete/duplicate/open invoices
-- Delete customers
+- Email button
+- WhatsApp button
+- PDF export
+- Delete invoice + recycle bin restore
+- Delete customer
 - Receipts
 - Settings
-- Packages
-- Email button via mailto
-- WhatsApp button
-- Premium PDF export
-- localStorage persistence
 - Backup export/import
+- LocalStorage persistence
 
-Deploy:
-1. Upload folder contents to GitHub
-2. Import into Vercel
-3. Framework: Vite
-4. Build command: vite build
-5. Output directory: dist
+## Deploy
+Upload the contents of this folder to GitHub, then deploy with Vercel:
+- Framework: Vite
+- Build command: vite build
+- Output directory: dist
