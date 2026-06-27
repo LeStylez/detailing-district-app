@@ -1,0 +1,1 @@
+export default function Button({ children, variant = 'primary', className = '', ...props }) { return <button className={`btn ${variant === 'outline' ? 'btn-outline' : 'btn-primary'} ${className}`} {...props}>{children}</button> }
